@@ -1,0 +1,20 @@
+{
+    "mailer" :  {
+        "admin_gui" : "http://localhost:3000",
+        "mail_from": "sensu@localhost",
+        "mail_to": "root@localhost",
+        "delivery_method": "smtp",
+        "smtp_address": "smtp.localhost",
+        "smtp_port": "25",
+        "smtp_domain": "localhost",
+        "smtp_enable_starttls_auto": "true",
+        "smtp_username" : "sensu@localhost",
+        "smtp_password" : "*Password*"
+    },
+    "handlers": {
+        "mailer": {
+            "type": "pipe",
+            "command": "/opt/sensu/embedded/bin/handler-mailer.rb"
+        }
+    }
+}
